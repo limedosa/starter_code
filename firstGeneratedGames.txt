@@ -1,0 +1,106 @@
+GAME 0
+
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Aung San Suu Kyi	She's the Burmese pro-democracy opposition leader	She was a Tunisian street vendor whose self-immolation martyrdom triggered the Arab Spring and led to the overthrow of the Tunisian government	the new intelligence software system for the iPhone that answers questions for you.	She's the new North Korean leader	1
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Kim Jong Un	He married Kim Kardashian for 72 days	He was a Tunisian street vendor whose self-immolation martyrdom triggered the Arab Spring and led to the overthrow of the Tunisian government	the new intelligence software system for the iPhone that answers questions for you.	the new intelligence software system for the iPhone that
+GAME 1
+
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	The SOPA bill	SOPA stands for Stop Online Piracy Act, legislation backed by movie studios that would allow them to take down websites that are engaged in piracy and make unlicensed copies of copyrighted works, music, movies, etc.	He was a Tunisian street vendor whose self-immolation martyrdom triggered the Arab Spring and led to the overthrow of the Tunisian government	SOPA stands for Stop Online Piracy Act, legislation backed by movie studios that would allow them to take down websites that are engaged in piracy and make unlicensed copies of copyrighted works, music, movies, etc.	the new intelligence software system for the iPhone that answers questions for you.	0
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they
+GAME 2
+
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Gilad Shalit	Gilad Shalit is the Israeli soldier who was released from captivity in exchange for many Palestinians	He married Kim Kardashian for 72 days	the new intelligence software system for the iPhone that answers questions for you.	He married Kim Kardashian for 72 days	3
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Kim Jong Un	He married Kim Kardashian for 72 days	He's the new North Korean leader	He married Kim Kardashian for 72 days	0
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you
+GAME 3
+
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Zafer Kaya	Kim Jong Un is the new North Korean leader	the new intelligence software system for the iPhone that answers questions for you.	He married Kim Kardashian for 72 days	He was a Tunisian street vendor whose self-immolation martyrdom triggered the Arab Spring and led to the overthrow of the Tunisian government	1
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Kim Jong Un	He was a Tunisian street vendor whose self-immolation martyrdom triggered the Arab Spring and led to the overthrow of the Tunisian government	the new intelligence software system for the iPhone that answers questions for you.	Gilad Shalit is the Israeli soldier who was released from captivity in exchange for many Palest
+GAME 4
+
+
+
+"""
+import nltk
+from nltk.stem import PorterStemmer
+
+# Load test cases and correct answers
+f = open('tests.txt')
+answers = {}
+for i in range(0,24):
+    f.readline()
+    correct = f.readline().strip()
+    questions = [i]
+    answers[i] = correct
+
+f = open('answers.txt')
+for i in range(0,24):
+    f.readline()
+    questions.append(i)
+
+
+def prompts(question):
+    """
+        prompts :
+            category : str
+                Category in which to classify the question.
+            explanation : str
+                Explanation of the question's meaning.
+            question : str
+                A question in the form: "Who are <people-in-news>?"
+            opt0 : str
+                A shortlist of possible answers.
+            opt1 : str
+                Another shortlist of possible answers.
+            opt2 : str
+                Yet another shortlist of possible answers.
+            opt3 : str
+                One more possible answer.
+            gold : str
+                Exact answer.
+        """
+    category = nltk.classify.binary_classify(question, answers)
+    gold = answers
+GAME 5
+
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Kim Jong Un	the new intelligence software system for the iPhone that answers questions for you.	the new North Korean leader	He married Kim Kardashian for 72 days	Gilad Shalit is the Israeli soldier who was released from captivity in exchange for many Palestinians	1
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Gilad Shalit	He married Kim Kardashian for 72 days	the new intelligence software system for the iPhone that answers questions for you.	He's the new North Korean leader	the new intelligence software system for the iPhone that answers questions for you.	Gilad Shalit is the Israeli soldier who was released from captivity in exchange for many Palestinians	1
+OTHER	It
+GAME 6
+
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Gilad Shalit	Gilad Shalit is the Israeli soldier who was released from captivity in exchange for many Palestinians	the new intelligence software system for the iPhone that answers questions for you.	He was a Tunisian street vendor whose self-immolation martyrdom triggered the Arab Spring and led to the overthrow of the Tunisian government	He's the new North Korean leader	0
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Gilad Shalit	He married Kim Kardashian for 72 days	Gilad Shalit is the Israeli soldier who was released from captivity in exchange for many Palestinians	the new intelligence software system for the iPhone that answers questions for you.	He was a Tunisian
+GAME 7
+
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Gilad Shalit	Gilad Shalit is the Israeli soldier who was released from captivity in exchange for many Palestinians	He married Kim Kardashian for 72 days	the new intelligence software system for the iPhone that answers questions for you.	He was a Tunisian street vendor whose self-immolation martyrdom triggered the Arab Spring and led to the overthrow of the Tunisian government	1
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Lady Gaga	Lady Gaga is the pop music star who's worn a meat dress, a lobster hat and a dress made of Kermit the Frog masks	He married Kim Kardashian for 72 days	He's the new North Korean leader
+GAME 8
+
+
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Kim Jong Un	Kim Jong Un is the new North Korean leader	the new intelligence software system for the iPhone that answers questions for you.	He was a Tunisian street vendor whose self-immolation martyrdom triggered the Arab Spring and led to the overthrow of the Tunisian government	the new intelligence software system for the iPhone that answers questions for you.	1
+OTHER	It's our annual year-end news quiz, compiled with the help of Kathie Baker and Tim Goodman. You are given new names in the news � people you probably never heard of before 2011, but who became famous during the past 12 months. Explain why they're famous.	Kim Jong Un	Kim Jong Un is the new North Korean leader	He's the new North Korean leader	the new intelligence software system for the iPhone that answers questions for you.	the new intelligence software system for the iPhone that answers questions for you.	0
+
+OTHER	It's our annual year-end news qu
+GAME 9
+
+
+Answer: First step, you can see the correct answers from the output of the following command:
+
+\begin{code}
+python -c "from sklearn import metrics; m = metrics.confusion_matrix(gold, predictions); print m"
+\end{code}
+
+where `predictions` is a numpy array containing all your predictions.
+
+Then you can build your `question` prompts in a way that the predicted answer appears as a choice (as it is the case in your example), but the real answer must be the 1st one.
+
+Finally, you could make your example more elegant by using a dictionary with category and explanation as keys, and list of predicted answers as values. Then you could use a `for` loop in order to read the prompts.
+
+\begin{code}
+gold_dict = {
+    'Gilad Shalit': 'Gilad Shalit is the Israeli soldier who was released from captivity in exchange for many Palestinians',
+    'North Korean leader': 'He married Kim Kardashian for 72 days',
+    'Siri': 'the new intelligence software system for the iPhone that answers questions for you',
+}
+
+answer = [gold_dict['Gilad Shalit']]
+print('category	explanation	question	opt0	opt1
